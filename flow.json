@@ -1,1 +1,191 @@
-[]
+[
+    {
+        "id": "c275c19a.c69ee",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d8fba480.ffaf48",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6288fa93.4df404",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "d8fba480.ffaf48",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a3dbeb84.5f3b48",
+        "type": "comment",
+        "z": "c275c19a.c69ee",
+        "name": "Publico cada segundo en el dashboard la hora",
+        "info": "",
+        "x": 350,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f9400a55.6a37e8",
+        "type": "inject",
+        "z": "c275c19a.c69ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "3278a2aa.fa2e6e",
+                "b49257c.28ff0a8",
+                "300c8b9a.8020e4"
+            ]
+        ]
+    },
+    {
+        "id": "3278a2aa.fa2e6e",
+        "type": "ui_text",
+        "z": "c275c19a.c69ee",
+        "group": "6288fa93.4df404",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b49257c.28ff0a8",
+        "type": "date-infos",
+        "z": "c275c19a.c69ee",
+        "name": "",
+        "addDays": 0,
+        "subDays": 0,
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [
+                "18c029c.55922d6"
+            ]
+        ]
+    },
+    {
+        "id": "4ae3af5a.1bc38",
+        "type": "ui_text",
+        "z": "c275c19a.c69ee",
+        "group": "6288fa93.4df404",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload.formatted}}",
+        "layout": "row-spread",
+        "x": 770,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "35a82fd4.98dfe",
+        "type": "debug",
+        "z": "c275c19a.c69ee",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "18c029c.55922d6",
+        "type": "rbe",
+        "z": "c275c19a.c69ee",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload.formatted",
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "4ae3af5a.1bc38",
+                "35a82fd4.98dfe"
+            ]
+        ]
+    },
+    {
+        "id": "300c8b9a.8020e4",
+        "type": "moment",
+        "z": "c275c19a.c69ee",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Africa/Abidjan",
+        "adjAmount": "0",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "LLL",
+        "locale": "es-ES",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "Europe/Madrid",
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "58699b11.b48944"
+            ]
+        ]
+    },
+    {
+        "id": "58699b11.b48944",
+        "type": "ui_text",
+        "z": "c275c19a.c69ee",
+        "group": "6288fa93.4df404",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 730,
+        "y": 420,
+        "wires": []
+    }
+]
