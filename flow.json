@@ -21,8 +21,104 @@
         "tab": "d8fba480.ffaf48",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": 8,
         "collapse": false
+    },
+    {
+        "id": "21c33f61.702ca",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
     },
     {
         "id": "a3dbeb84.5f3b48",
@@ -70,14 +166,14 @@
         "type": "ui_text",
         "z": "c275c19a.c69ee",
         "group": "6288fa93.4df404",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "EPOCH",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 590,
+        "x": 600,
         "y": 200,
         "wires": []
     },
@@ -101,11 +197,11 @@
         "type": "ui_text",
         "z": "c275c19a.c69ee",
         "group": "6288fa93.4df404",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "Fecha",
         "format": "{{msg.payload.formatted}}",
         "layout": "row-spread",
         "x": 770,
@@ -177,15 +273,35 @@
         "type": "ui_text",
         "z": "c275c19a.c69ee",
         "group": "6288fa93.4df404",
-        "order": 0,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "Completo",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 730,
+        "x": 740,
         "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a6ee6fe7.91458",
+        "type": "comment",
+        "z": "c275c19a.c69ee",
+        "name": "Publico el día y solo lo mando cuando cambie",
+        "info": "",
+        "x": 550,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "76a860be.71f43",
+        "type": "comment",
+        "z": "c275c19a.c69ee",
+        "name": "Muestro la fecha en formato claro",
+        "info": "",
+        "x": 510,
+        "y": 380,
         "wires": []
     }
 ]

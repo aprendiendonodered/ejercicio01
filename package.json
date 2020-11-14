@@ -3,7 +3,10 @@
     "description": "A Node-RED Project",
     "version": "0.0.1",
     "dependencies": {
-        "node-red-dashboard": "2.23.4"
+        "node-red-dashboard": "2.23.4",
+        "node-red-contrib-date": "0.0.2",
+        "node-red-contrib-moment": "4.0.0",
+        "node-red-node-rbe": "0.2.9"
     },
     "node-red": {
         "settings": {
