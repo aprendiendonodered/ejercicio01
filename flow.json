@@ -17,11 +17,11 @@
     {
         "id": "6288fa93.4df404",
         "type": "ui_group",
-        "name": "Default",
+        "name": "ejercicio01",
         "tab": "d8fba480.ffaf48",
         "order": 1,
         "disp": true,
-        "width": 8,
+        "width": "8",
         "collapse": false
     },
     {
@@ -157,7 +157,8 @@
             [
                 "3278a2aa.fa2e6e",
                 "b49257c.28ff0a8",
-                "300c8b9a.8020e4"
+                "300c8b9a.8020e4",
+                "4d7e5964.4d6678"
             ]
         ]
     },
@@ -264,7 +265,8 @@
         "y": 420,
         "wires": [
             [
-                "58699b11.b48944"
+                "58699b11.b48944",
+                "35a82fd4.98dfe"
             ]
         ]
     },
@@ -302,6 +304,23 @@
         "info": "",
         "x": 510,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4d7e5964.4d6678",
+        "type": "debug",
+        "z": "c275c19a.c69ee",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 160,
         "wires": []
     }
 ]
